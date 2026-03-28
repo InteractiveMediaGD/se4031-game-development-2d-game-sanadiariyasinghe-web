@@ -4,16 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ground
+  - Logic
+  - Collision Tag
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - flappy bird
   - Water
   - UI
-  - Ground
-  - wall
+  - 
+  - 
   - 
   - 
   - 
