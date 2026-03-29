@@ -1,77 +1,19 @@
-# Flappy Bird - 2D Unity Game
+Galactic Navigator: 2D Space Survival
 
 ## Overview
-**Flappy Bird** is a fun and addictive 2D game built using **Unity**! The game follows the classic mechanics of the original Flappy Bird, where you control a bird that must navigate through obstacles by pressing the **Spacebar** to flap its wings.
+Galactic Navigator is an interactive 2D space-themed survival game developed using the Unity Engine. The project features a physics-driven player controller where the user must navigate a UFO through a hazardous environment of pipes and moving fireballs.
+Developed as part of the SE4031: 2D Game Development module, this project demonstrates core game architecture principles, including Dynamic Difficulty Scaling (DDS), Object Instantiation, and Real-time UI Synchronization.
 
 ## Features
-- 🎮 **Smooth Physics-Based Gameplay**: Uses Unity's physics engine for realistic movement.
-- 🔄 **Endless Scrolling Environment**: Pipes continuously generate as you progress.
-- 🏆 **Score System**: Tracks the number of pipes successfully passed.
-- 💥 **Collision Detection**: The game ends when the bird collides with pipes or the ground.
-- 🎵 **Background Music & Sound Effects**: Enhances the gaming experience.
-- 🚀 **Optimized Performance**: Runs efficiently on different hardware.
+•	Dynamic Difficulty Scaling (DDS): The game speed and obstacle frequency increase automatically based on the player's score milestones (every 10 points) and elapsed time.
+•	Combat & Defense System: Unlike traditional "avoidance" games, players can fire projectiles using the 'Z' key to destroy incoming fireballs.
+•	Robust Health System: Features a 100-point health pool with Invincibility Frames (I-Frames) using C# Coroutines to prevent instant death upon collision.
+•	Adaptive HUD (Heads-Up Display): The health UI dynamically changes color (White → Yellow → Red) to provide immediate visual feedback on the player's status.
+•	Memory Optimization: Implemented a "Deadzone" cleanup system that destroys off-screen objects to prevent memory leaks and maintain high performance.
 
 ## Project Workflow
-1. **Game Design:** Planning UI, mechanics, and sprite design.
-2. **Development:** Implementing player controls, collision detection, and score tracking.
-3. **Testing:** Debugging physics, performance optimization, and playtesting.
-4. **Deployment:** Running the game in Unity and packaging for distribution.
-
-## Installation
-### Prerequisites
-Ensure you have **Unity** installed. Then, clone the repository:
-```bash
-git clone https://github.com/yourusername/FlappyBird.git
-cd FlappyBird
-```
-
-### Running the Game
-1. Open the project in Unity.
-2. Press the **Play** button in the Unity editor to start the game.
-
-## How to Play
-- Press **Spacebar** to make the bird flap its wings.
-- Avoid hitting the pipes and the ground.
-- Score points by successfully passing through the pipes.
-- The game ends when the bird collides with an obstacle.
-
-## Technologies Used
-- 🛠 **Game Engine**: Unity
-- 💻 **Programming Language**: C#
-- 🎨 **Graphics**: 2D Sprites
-- ⚙ **Physics Engine**: Unity Rigidbody
-
-## Screenshots & Demo
-### Screenshots
-#### Game Start Screen
-![Game Start](screenshots/start_screen.png)
-
-#### Gameplay
-![Gameplay](screenshots/gameplay.png)
-
-#### Game Over Screen
-![Game Over](screenshots/gameover.png)
-
-### Demo Video
-🎥 **Watch the demo:**
-[Click here to view](flappybird_demo.mp4)
-
-## Future Enhancements
-🚧 **Planned Updates:**
-- Adding different difficulty levels.
-- Implementing various bird skins.
-- Integrating a global leaderboard.
-- Introducing power-ups and special abilities.
-
-## Contributing
-Feel free to fork the repository, make enhancements, and submit a pull request.
-
-## Contact
-📧 Email: wasifsohail66@gmail.com
-
-## Credits
-Developed by **Wasif Sohail**.
-
-## Disclaimer
-This project is for educational and personal use only.
+1.	Input Polling: The system listens for Space (Jump) and Z (Shoot) inputs during the Update loop.
+2.	Physics Processing: Rigidbody2D handles gravity and upward impulses, ensuring smooth, physics-based movement.
+3.	State Management: A centralized Logic Manager tracks the score, health, and global speed multipliers.
+4.	Collision Matrix: The game uses Tags (FireBall, HealthPack, Pipe) to trigger specific logic events—such as damage, healing, or score increments—upon collision.
 
